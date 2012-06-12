@@ -11,11 +11,11 @@ from django.utils import simplejson, html, encoding
 from django.conf import settings
 
 def repo(request, template_name="repo.html"):
-    with closing(urlopen("https://api.github.com/repos/%s/%s/pulls" % (settings.SANDCASTLE_USER, settings.SANDCASTLE_REPO))) as u:
+    with closing(urlopen("https://api.github.com/repos/%s/%s/pulls?per_page=100" % (settings.SANDCASTLE_USER, settings.SANDCASTLE_REPO))) as u:
         pull_data = u.read()
 
 
-    with closing(urlopen("https://api.github.com/repos/%s/%s/branches" % (settings.SANDCASTLE_USER, settings.SANDCASTLE_REPO))) as u:
+    with closing(urlopen("https://api.github.com/repos/%s/%s/branches?per_page=100" % (settings.SANDCASTLE_USER, settings.SANDCASTLE_REPO))) as u:
         branch_data = u.read()
 
     pulls = simplejson.loads(pull_data)
