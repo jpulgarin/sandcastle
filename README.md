@@ -16,5 +16,4 @@ for this repository would look like:
 Used At
 -------
 
-It is currently in use at [Khan Academy](http://www.khanacademy.org) to
-test pull requests to their exercise framework. It is hosted at [sandcastle.khanacademy.org](http://sandcastle.khanacademy.org).
+It was previously used at [Khan Academy](http://www.khanacademy.org) to test pull requests to their exercise framework.
